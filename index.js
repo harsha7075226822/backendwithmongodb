@@ -5,11 +5,15 @@ import { userModel } from "./db.js";
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import {cors} from cors
 
 const app = express();
 dotenv.config();
 
 app.use(express.json());
+app.use(cors({
+    method: ["GET", "POST", "PUT", "DELETE"]
+}))
 
 app.get("/", (req,res) => {
     res.status(200).json({ message: "GET is successful" });
