@@ -5,7 +5,7 @@ import { userModel } from "./db.js";
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import {cors} from cors
+import {cors} from "cors"
 
 const app = express();
 dotenv.config();
